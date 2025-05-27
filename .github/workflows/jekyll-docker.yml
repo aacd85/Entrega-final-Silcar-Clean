@@ -1,0 +1,17 @@
+name: Mi Primer Workflow
+
+on:
+  push:
+    branches:
+      - main # O 'master' si tu rama principal se llama así
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v4
+
+    - name: Imprimir un mensaje
+      run: echo "¡Hola, GitHub Actions! Este es mi primer workflow."
